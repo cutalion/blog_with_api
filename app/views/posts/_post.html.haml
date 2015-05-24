@@ -1,0 +1,6 @@
+.post
+  %p
+    = link_to post do
+      = post.title
+      - if post.draft
+        (draft)

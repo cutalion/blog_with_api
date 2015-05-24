@@ -1,0 +1,3 @@
+= simple_form_for [post, comment] do |f|
+  = f.input :body, label: false
+  = f.button :submit, comment.persisted? ? 'Save' : 'Comment'
