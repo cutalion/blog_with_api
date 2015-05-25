@@ -1,13 +1,13 @@
 %article
   %header.clearfix
     %h2.pull-left
-      = @post.title
-      - if @post.draft?
+      = post.title
+      - if post.draft?
         %small (draft)
     .btn-group.pull-right
-      = link_to 'Edit', [:edit, @post], class: 'btn btn-default'
-      = link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
-  %p= @post.body
+      = link_to 'Edit', [:edit, post], class: 'btn btn-default'
+      = link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+  %p= post.body
   .comments
     %h3 Comments
     - if @comments.any?
@@ -15,4 +15,4 @@
     - else
       %p There are no comments yet. Be first.
 
-    = render 'comments/form', comment: @new_comment, post: @post
+    = render 'comments/form', comment: @new_comment, post: post
