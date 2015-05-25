@@ -11,6 +11,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'simple_form'
+gem 'active_model_serializers'
 
 group :development do
   gem 'guard-rspec'
